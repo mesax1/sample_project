@@ -13,9 +13,10 @@ Simple exercise written in Python
     ```
     
 * Now navigate into your cloned repo:
-        ```bash
+  
+  ```bash
   cd sample_project
-        ```
+  ```
 
 ## Execution and Testing
 * Execute the code using:
