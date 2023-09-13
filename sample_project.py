@@ -24,16 +24,16 @@ any repeat values in the list.
 The algorithm to find the pairs must be faster than O(n^2). All edge cases
 should be handled appropriately.
 """
-from typing import List
+from typing import List, Set, Tuple
 
 
-def find_the_pairs(nums: List[int], target: int) -> List[int]:
+def find_the_pairs(nums: List[int], target: int) -> Set[Tuple[int, int]]:
     """
     Function that finds pairs of integers from a list that
     sum to a given value. The function will take as input the list of numbers as
-    well as the target sum. The function will return the list of pairs that sum to
-    the target value. If no pair is found, return an empty list. If the input list is
-    empty, it also returns an empty list.
+    well as the target sum. The function will return a set of tuples that represent pairs of integers
+    that sum to the target value. If no pair is found, it returns an empty set. If the input list is
+    empty, it also returns an empty set.
 
     Complexity O(n)
 
@@ -46,17 +46,17 @@ def find_the_pairs(nums: List[int], target: int) -> List[int]:
 
     Returns
     -------
-    pairs: List[int]
-        List of pairs of integers values that sum to the given target.
+    pairs: Set[Tuple[int, int]]
+        Set of pairs of integer values that sum to the given target.
 
     """
-    pairs = []
+    pairs = set()
     tracking_set = set()
 
     for i, current_value in enumerate(nums):
         difference = target - current_value
         if difference in tracking_set:
-            pairs.append([difference, current_value])
+            pairs.add((difference, current_value))
         tracking_set.add(current_value)
     return pairs
 
