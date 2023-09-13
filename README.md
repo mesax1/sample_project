@@ -12,11 +12,10 @@ Simple exercise written in Python
     ```bash
         python sample_project.py
     ```
-    The tests can be modified within
-    ```
-        sample_project_tests.py
-    ```
-    After modifying the tests, run the code again.
+    Input list and target value can be changed within the code, within the `if __name__ == "__main__":` section
+
+    Run the tests using:
     ```bash
-        python sample_project.py
+        python sample_project_tests.py
     ```
+    The existing tests can be modified and new tests can be added within the class TestFindThePairs.
